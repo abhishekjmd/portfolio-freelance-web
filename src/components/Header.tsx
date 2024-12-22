@@ -18,7 +18,7 @@ function Header() {
           <ChromeMenu />
         </div>
       </div>
-      <div className="flex pl-8">
+      <div className="flex pl-12">
         <div className="hover:bg-[#36394a] p-1 rounded-md transform duration-300">
           <ToggleSidebar />
         </div>
@@ -29,14 +29,14 @@ function Header() {
           <SplitHorizontal />
         </div>
       </div>
-      <div className="flex justify-center items-center gap-2">
-        <div className="hover:bg-[#36394a] p-3  transform duration-300">
+      <div className="flex justify-center items-center gap-1">
+        <div className="hover:bg-[#36394a] p-2.5  transform duration-300">
           <ChromeMinimize />
         </div>
-        <div className="hover:bg-[#36394a] p-3  transform duration-300">
+        <div className="hover:bg-[#36394a] p-2.5  transform duration-300">
           <ChromeRestore />
         </div>
-        <div className="hover:bg-red-500 p-3 hover:text-white  transform duration-300">
+        <div className="hover:bg-red-500 p-2.5 hover:text-white  transform duration-300">
           <ChromeClose />
         </div>
       </div>

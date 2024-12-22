@@ -1,11 +1,32 @@
 import React from "react";
+import RadioTower from "../icons/radio-tower";
+import Remote from "../icons/remote";
+import SourceControl from "../icons/source-control";
+import Bell from "../icons/bell";
 
-const footer = () => {
+const Footer = () => {
   return (
-    <div>
-      <p className="p-10 h-20 bg-black">hello header</p>
+    <div className="flex w-full justify-between text-[#a9b1d6] text-sm border-t-2 border-[#1b1e2e]">
+      <div className="flex justify-center items-center gap-2">
+        <div className="px-2 py-1 bg-[#3d59a1]">
+          <Remote />
+        </div>
+        <div className="flex justify-center items-center p-1 ">
+          <SourceControl height={18} width={18} />
+          <span className="ml-1">main*</span>
+        </div>
+      </div>
+      <div className="flex px-4 justify-center items-center gap-5">
+        <div className="flex justify-center items-center px-1">
+          <RadioTower />
+          <span className="ml-1">Go Live</span>
+        </div>
+        <div>
+          <Bell />
+        </div>
+      </div>
     </div>
   );
 };
 
-export default footer;
+export default Footer;

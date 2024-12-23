@@ -2,8 +2,8 @@ import React from 'react'
 
 function Scroller() {
   return (
-    <div>
-      <p>Scroller </p>
+    <div className='w-6 '>
+      {/* <p>Scroller </p> */}
     </div>
   )
 }

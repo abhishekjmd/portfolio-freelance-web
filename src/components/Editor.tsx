@@ -24,14 +24,14 @@ const Editor = ({ onClick, toggleEditor }) => {
         </span>
       </div>
       {toggleEditor && (
-        <div className="flex items-center">
-          <div className="hover:bg-[#36394a] p-1 rounded-md transform duration-300">
+        <div className="flex items-center mr-3">
+          <div className="hover:bg-[#36394a] p-0.5 rounded-md transform duration-300">
             <NewFile />
           </div>
-          <div className="hover:bg-[#36394a] p-1 rounded-md transform duration-300">
+          <div className="hover:bg-[#36394a] p-0.5 rounded-md transform duration-300">
             <SaveAll />
           </div>
-          <div className="hover:bg-[#36394a] p-1 rounded-md transform duration-300">
+          <div className="hover:bg-[#36394a] p-0.5 rounded-md transform duration-300">
             <CloseAll />
           </div>
         </div>

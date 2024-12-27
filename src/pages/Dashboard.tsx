@@ -23,9 +23,8 @@ const Dashboard = () => {
       />
       <div className="flex-grow ">
         {toggleHome ? <Home /> : toggleExplorer && <Explorer />}
-        {/* {toggleExplorer && <Explorer />} */}
       </div>
-      <Scroller />
+      {/* <Scroller /> */}
     </div>
   );
 };

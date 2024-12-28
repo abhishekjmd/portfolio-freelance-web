@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ChevronDown from "../icons/chevron-down";
 import ChevronRight from "../icons/chevron-right";
-import CloseAll from "../icons/close-all";
-import SaveAll from "../icons/save-all";
 import NewFile from "../icons/new-file";
 import NewFolder from "../icons/new-folder";
 import Refresh from "../icons/refresh";
@@ -18,11 +16,19 @@ import NodeJs from "../icons/nodejs";
 import TailwindCSS from "../icons/tailwindcss";
 import TsConfig from "../icons/tsconfig";
 import { AnimatePresence, motion } from "framer-motion";
+import PublicSection from "./PublicSection";
+import "../index.css";
 
 const Portfolio = ({ onClick, togglePortfolio }) => {
+  const [togglePublic, setTogglePublic] = useState(false);
+  const handlePublic = () => {
+    setTogglePublic(!togglePublic);
+  };
   return (
-    <div className="flex flex-col  border-b-2 border-[#1b1e2e] mx-[1px] mt-1 pb-2">
-      <div className="flex flex-row w-full justify-between items-center mx-[1px]">
+    <div
+      className={`flex flex-col  border-b-2 border-[#1b1e2e] mx-[1px] mt-1 pb-2`}
+    >
+      <div className="flex flex-row w-full justify-between items-center mx-[1px] ">
         <div
           onClick={onClick}
           className="flex flex-row justify-center items-center"
@@ -92,14 +98,24 @@ const Portfolio = ({ onClick, togglePortfolio }) => {
             </div>
 
             {/* public */}
-            <div className="flex flex-row w-full items-center mx-[6px] p-0.5">
-              <div className="flex flex-row gap-1 items-center ">
-                <ChevronRight />
+            <div className="flex flex-col w-full mx-[6px] p-0.5">
+              <div
+                onClick={handlePublic}
+                className="flex flex-row gap-1 items-center"
+              >
+                {togglePublic ? (
+                  <div>
+                    <ChevronDown />
+                  </div>
+                ) : (
+                  <ChevronRight />
+                )}
                 <Public />
                 <span className="text-base font-normal ml-1 opacity-100">
                   public
                 </span>
               </div>
+              {togglePublic && <PublicSection />}
             </div>
 
             {/* src */}
@@ -113,83 +129,55 @@ const Portfolio = ({ onClick, togglePortfolio }) => {
               </div>
             </div>
 
-            {/* eslint */}
-            {/* <div className="flex flex-row w-full items-center mx-[6px]"> */}
             <div className="ml-7">
               <div className="flex flex-row gap-1 items-center py-0.5">
-                {/* <ChevronRight /> */}
                 <Eslint />
                 <span className="text-base font-normal ml-1 opacity-100">
                   .eslintrc.json
                 </span>
               </div>
-              {/* </div> */}
 
-              {/* gitignore */}
-              {/* <div className="flex flex-row w-full items-center mx-[6px]"> */}
               <div className="flex flex-row gap-1 items-center py-0.5">
-                {/* <ChevronRight /> */}
                 <Git />
                 <span className="text-base font-normal ml-1 opacity-100">
                   .gitignore
                 </span>
               </div>
-              {/* </div> */}
 
-              {/* next.config.js */}
-              {/* <div className="flex flex-row w-full items-center mx-[6px]"> */}
               <div className="flex flex-row gap-1 items-center py-0.5">
-                {/* <ChevronRight /> */}
                 <NextConfig />
                 <span className="text-base font-normal ml-1 opacity-100">
                   .next.config.js
                 </span>
               </div>
-              {/* </div> */}
 
-              {/* package-lock.json */}
-              {/* <div className="flex flex-row w-full items-center mx-[6px]"> */}
               <div className="flex flex-row gap-1 items-center py-0.5">
-                {/* <ChevronRight /> */}
                 <NodeJs />
                 <span className="text-base font-normal ml-1 opacity-100">
                   package-lock.json
                 </span>
               </div>
-              {/* </div> */}
 
-              {/* package.json */}
-              {/* <div className="flex flex-row w-full items-center mx-[6px]"> */}
               <div className="flex flex-row gap-1 items-center py-0.5">
-                {/* <ChevronRight /> */}
                 <NodeJs />
                 <span className="text-base font-normal ml-1 opacity-100">
                   package.json
                 </span>
               </div>
-              {/* </div> */}
 
-              {/* tailwind.config.ts */}
-              {/* <div className="flex flex-row w-full items-center mx-[6px]"> */}
               <div className="flex flex-row gap-1 items-center py-0.5">
-                {/* <ChevronRight /> */}
                 <TailwindCSS />
                 <span className="text-base font-normal ml-1 opacity-100">
                   tailwind.config.ts
                 </span>
               </div>
-              {/* </div> */}
 
-              {/* tsconfig.json */}
-              {/* <div className="flex flex-row w-full items-center mx-[6px] p-2"> */}
               <div className="flex flex-row gap-1 items-center py-0.5">
-                {/* <ChevronRight /> */}
                 <TsConfig />
                 <span className="text-base font-normal ml-1 opacity-100">
                   tsconfig.json
                 </span>
               </div>
-              {/* </div> */}
             </div>
           </motion.div>
         )}

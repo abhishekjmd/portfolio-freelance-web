@@ -2,29 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global CSS to hide scrollbars and prevent scrolling */
-html, body {
-    overflow: hidden; /* Disable scrolling globally */
-    height: 100%; /* Full-page height */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-  }
-  
-  * {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-  }
-  
-  *::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
-  }
-  
-  /* Fix for mobile responsiveness */
-  body {
-    position: fixed; /* Prevent scroll on mobile */
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Ensure no scrolling */
-    touch-action: none; /* Disable touch scrolling */
-  }
-  
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

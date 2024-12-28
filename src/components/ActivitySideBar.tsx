@@ -9,7 +9,7 @@ import Gear from "../icons/gear";
 // this contain the left side bar
 const ActivitySideBar = ({ handleExplorerClick, handleRemainingTabs }) => {
   return (
-    <div className="flex flex-col justify-between items-center text-[#a9b1d6]  h-[88vh] overscroll-none">
+    <div className="flex flex-col justify-between items-center text-[#a9b1d6] z-30  h-[88vh] overscroll-none">
       <div className="flex flex-col justify-center items-center">
         <div
           onClick={handleExplorerClick}

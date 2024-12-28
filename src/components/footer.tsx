@@ -6,7 +6,7 @@
 
   const Footer = () => {
     return (
-      <div className="flex  justify-between overflow-y-hidden slim text-[#a9b1d6] text-sm border-t-2 border-[#1b1e2e]">
+      <div className="flex  justify-between overflow-y-hidden slim text-[#a9b1d6] text-sm border-t-2 border-[#1b1e2e] overflow-x-hidden">
         <div className="flex justify-center items-center gap-1">
           <div className="px-2 py-1 bg-[#3d59a1] hover:bg-[#282e44]">
             <Remote />

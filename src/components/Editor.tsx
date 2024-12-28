@@ -7,7 +7,7 @@ import ChevronRight from "../icons/chevron-right";
 
 const Editor = ({ onClick, toggleEditor }) => {
   return (
-    <div className="flex flex-row justify-between items-center hover:border-[#36394a] p-[2px] hover:border-b-1 hover:border hover:rounded-none border-b-2 border-[#1b1e2e] mx-[1px] mt-1 pb-2">
+    <div className="flex flex-row justify-between items-center hover:border-[#36394a] p-[2px] hover:border-b-1 hover:border hover:rounded-none border-b-2 border-[#1b1e2e] mx-[1px] mt-1 pb-2 overflow-x-hidden">
       <div
         onClick={onClick}
         className="flex flex-row justify-center items-center"

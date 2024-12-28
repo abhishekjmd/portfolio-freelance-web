@@ -1,15 +1,15 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import ChevronRight from "../icons/chevron-right";
-import Src from "../icons/src";
 import FavIcon from "../icons/fav-icon";
 import AboutMe from "../icons/about-me";
 import WorkExperience from "../icons/work-experience";
 import Technologies from "../icons/technologies";
 import Projects from "../icons/projects";
 import ContactMe from "../icons/contact-me";
-import "../index.css";
-import { AnimatePresence, motion } from "framer-motion";
-const PublicSection = () => {
+import App from "../icons/app";
+import ChevronRight from "../icons/chevron-right";
+
+const SrcSection = () => {
   return (
     <AnimatePresence>
       <motion.div
@@ -21,14 +21,15 @@ const PublicSection = () => {
           ease: [0.4, 0, 0.2, 1],
         }}
       >
-        <div className="flex flex-col w-full  p-0.5 border-l-[2px] ml-[9px] border-[#36394a] border-opacity-40 overflow-y-auto scroll-smooth">
-          <div className="flex flex-row items-center mx-6 hover:bg-[#36394a] hover:rounded-none p-[2px] transform duration-300 gap-1 ">
-            <FavIcon />
+        <div className="flex flex-col w-full  p-0.5">
+          <div className="flex flex-row items-center mx-9 hover:bg-[#36394a] hover:rounded-none p-[2px] transform duration-300 gap-1">
+            <ChevronRight />
+            <App />
             <span className="text-base font-normal ml-1 opacity-100">
-              about_me.ts
+              My Work
             </span>
           </div>
-          <div className="mx-10">
+          {/* {/* <div className="mx-12">
             <div className="flex flex-row items-center gap-1">
               <AboutMe />
               <span className="text-base font-normal ml-1 opacity-100">
@@ -62,12 +63,12 @@ const PublicSection = () => {
               <span className="text-base font-normal ml-1 opacity-100">
                 Contact Me
               </span>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
       </motion.div>
     </AnimatePresence>
   );
 };
 
-export default PublicSection;
+export default SrcSection;

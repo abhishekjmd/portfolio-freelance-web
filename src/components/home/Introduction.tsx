@@ -8,7 +8,7 @@ const Introduction = () => {
   return (
     <div className="w-full overflow-y-auto overflow-x-hidden text-[white]">
       <Container>
-        <div className="min-h-screen relative">
+        <div className="h-full relative">
           <FadeIn className="max-w-5xl pt-40 md:pt-[20vh] 2xl:pt-[30vh]">
             <div className="flex flex-col gap-1.5">
               <div>

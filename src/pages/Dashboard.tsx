@@ -17,12 +17,12 @@ const Dashboard = () => {
     setToggleHome(!toggleHome);
   };
   return (
-    <div className="flex flex-row h-full">
+    <div className="flex flex-row h-screen overflow-hidden">
       <ActivitySideBar
         handleExplorerClick={handleToggleExplorer}
         handleRemainingTabs={handleExplorerClose}
       />
-      <div className="flex-grow ">
+      <div className="flex-grow">
         {toggleHome ? (
           <>
             <TabsContainer />

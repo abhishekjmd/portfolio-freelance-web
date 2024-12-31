@@ -9,7 +9,7 @@ import ChromeRestore from "../icons/chrome-restore";
 import ChromeClose from "../icons/chrome-close";
 function Header() {
   return (
-    <div className="flex overscroll-y-none justify-between text-[#a9b1d6] items-center border-b-2 border-[#1b1e2e] overflow-x-hidden">
+    <div className="w-full flex overflow-hidden justify-between text-[#a9b1d6] items-center border-b-2 border-[#1b1e2e] overflow-x-hidden">
       <div className="flex  justify-center items-center gap-5">
         <div className="p-2">
           <VSCode />

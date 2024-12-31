@@ -33,7 +33,7 @@ const Explorer = () => {
   };
 
   return (
-    <div className="flex flex-col  text-[#a9b1d6] h-full gap-1 ml-1 overflow-hidden">
+    <div className="flex flex-col w-auto   text-[#a9b1d6] h-full gap-1 ml-1 overflow-hidden">
       {/* the top section with text explorer */}
       <div className="flex justify-between items-center px-7">
         <div className="flex uppercase text-xs  my-2 select-none items-center justify-between">

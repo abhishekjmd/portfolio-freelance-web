@@ -30,7 +30,7 @@ const Introduction = () => {
                 technologies.
               </p>
             </div>
-            <Socials />
+            <Socials className="mt-5" />
             <div className="scroll-down">
               <span></span>
               <span></span>

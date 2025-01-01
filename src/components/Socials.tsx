@@ -35,14 +35,14 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
-const Socials = () => {
+const Socials = ({ className }: { className?: string }) => {
   const socialMediaLinks = [
     { title: "LinkedIn", href: "./home", icon: LinkedinIcon },
     { title: "github", href: "github", icon: GitHubIcon },
   ];
   return (
-    <FadeInStagger role="list" className={clsx("flex gap-x-4 text-white mt-5")}>
-      <div className="text-[white] flex flex-row items-center gap-5 mt-5">
+    <FadeInStagger role="list" className={clsx("flex gap-x-4 text-white",className)}>
+      <div className={clsx("text-[white] flex flex-row items-center gap-5",)}>
         {socialMediaLinks.map((profile) => (
           <FadeIn key={profile.title}>
             <a

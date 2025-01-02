@@ -5,6 +5,7 @@ import Introduction from "../components/home/Introduction";
 import Border from "../components/home/Border";
 import AboutMe from "../components/home/AboutMe";
 import WorkExperience from "../components/home/WorkExperience";
+import Skill from "../components/home/Skill";
 const Home = () => {
   return (
     <div className="w-fit h-full overflow-y-scroll overflow-x-hidden text-[white]">
@@ -18,6 +19,10 @@ const Home = () => {
         <Border />
       </div>
       <WorkExperience />
+      <Skill />
+      <div className="mt-24 p-4">
+        <Border />
+      </div>
     </div>
   );
 };

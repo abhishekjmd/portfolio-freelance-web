@@ -19,7 +19,6 @@ const AboutMe = () => {
                 <span className="bg-[#7ee787] icon-blur absolute inset-0 -z-10 "></span>
               </>
             }
-            
             title="About Me"
             description={
               <div>
@@ -31,20 +30,27 @@ const AboutMe = () => {
             }
           />
           {/* <Stars id="about-me" /> */}
-          <div className="">
+          <div className="text-[#a9b1d6]">
             <h3 className="text-lg font-semibold leading-8 tracking-tight text-white">
-              Jose Alejandro Gomez Elizondo
+              Abhishek Tiwari
             </h3>
             <p className="text-base leading-7 text-[#7ee787]">
-              Full-stack Web Developer
+              Full-stack Developer
             </p>
-            <p className="mt-4 text-lg pr-2 text-gray-500">
-              I&apos;m an experienced software engineer who constantly seeks out
-              innovative solutions to everyday problems.
+            <p className="mt-4 text-lg pr-2 ">
+              I&apos;m a passionate software developer with hands-on experience
+              in internships, freelance projects, and hackathons. I thrive on
+              solving real-world problems and delivering impactful solutions.
             </p>
-            <p className="mt-4 text-lg pr-2 text-gray-500">
-              After 4 years in this industry I have worked with multiple
-              front-end and back-end technologies.
+            <p className="mt-4 text-lg pr-2 ">
+              During my internships with innovative startups, I collaborated
+              with talented teams to build and deploy impactful features,
+              enhancing user experiences and contributing to business growth.
+            </p>
+            <p className="mt-4 text-lg pr-2 ">
+              My experience spans multiple front-end and back-end technologies,
+              equipping me with the skills to tackle diverse development
+              challenges effectively.
             </p>
           </div>
           <div className="w-full flex">
@@ -61,7 +67,7 @@ const AboutMe = () => {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <div className=" flex flex-col w-full gap-2 w-64 ">
+            <div className=" flex flex-col  gap-2 w-64">
               <p className="text-[#7ee787] border-b pb-2  border-b-gray-500 font-bold">
                 | Languages
               </p>

@@ -19,17 +19,22 @@ import { AnimatePresence, motion } from "framer-motion";
 import PublicSection from "./PublicSection";
 import "../index.css";
 import SrcSection from "./SrcSection";
+import { useGlobalContext } from "../context/ContextProvider";
 
 const Portfolio = ({ onClick, togglePortfolio }) => {
-  const [togglePublic, setTogglePublic] = useState(false);
-  const [toggleSrc, setToggleSrc] = useState(false);
-  const handlePublic = () => {
-    setTogglePublic(!togglePublic);
-  };
+  // const [togglePublic, setTogglePublic] = useState(false);
+  // const [toggleSrc, setToggleSrc] = useState(false);
 
-  const handleSrc = () => {
-    setToggleSrc(!toggleSrc);
-  };
+  const { handleTogglePublic, togglePublic, toggleSrc, handleToggleSrc } =
+    useGlobalContext();
+
+  // const handleTogglePublic = () => {
+  //   setTogglePublic(!togglePublic);
+  // };
+
+  // const handleSrc = () => {
+  //   setToggleSrc(!toggleSrc);
+  // };
 
   return (
     <div
@@ -109,7 +114,7 @@ const Portfolio = ({ onClick, togglePortfolio }) => {
               {/* public */}
               <div className="flex flex-col w-full mx-[6px] p-0.5">
                 <div
-                  onClick={handlePublic}
+                  onClick={handleTogglePublic}
                   className="flex flex-row gap-1 items-center "
                 >
                   {togglePublic ? (
@@ -130,7 +135,7 @@ const Portfolio = ({ onClick, togglePortfolio }) => {
               {/* src */}
               <div className="flex flex-col w-full mx-[6px] p-0.5">
                 <div
-                  onClick={handleSrc}
+                  onClick={handleToggleSrc}
                   className="flex flex-row gap-1 items-center "
                 >
                   {toggleSrc ? <ChevronDown /> : <ChevronRight />}

@@ -1,6 +1,4 @@
 import React from "react";
-import ChevronRight from "../icons/chevron-right";
-import Src from "../icons/src";
 import FavIcon from "../icons/fav-icon";
 import AboutMe from "../icons/about-me";
 import WorkExperience from "../icons/work-experience";
@@ -9,7 +7,10 @@ import Projects from "../icons/projects";
 import ContactMe from "../icons/contact-me";
 import "../index.css";
 import { AnimatePresence, motion } from "framer-motion";
+import { useGlobalContext } from "../context/ContextProvider";
 const PublicSection = () => {
+  const { scrollToSection } = useGlobalContext();
+
   return (
     <AnimatePresence>
       <motion.div
@@ -29,35 +30,38 @@ const PublicSection = () => {
             </span>
           </div>
           <div className="mx-10">
-            <div className="flex flex-row items-center gap-1">
+            <div
+              onClick={() => scrollToSection("aboutMe")}
+              className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none"
+            >
               <AboutMe />
               <span className="text-base font-normal ml-1 opacity-100">
                 About Me
               </span>
             </div>
 
-            <div className="flex flex-row items-center gap-1">
+            <div className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none">
               <WorkExperience />
               <span className="text-base font-normal ml-1 opacity-100">
                 Work Experience
               </span>
             </div>
 
-            <div className="flex flex-row items-center gap-1">
+            <div className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none">
               <Technologies />
               <span className="text-base font-normal ml-1 opacity-100">
                 Skills
               </span>
             </div>
 
-            <div className="flex flex-row items-center gap-1">
+            <div className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none">
               <Projects />
               <span className="text-base font-normal ml-1 opacity-100">
                 My Work
               </span>
             </div>
 
-            <div className="flex flex-row items-center gap-1">
+            <div className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none">
               <ContactMe />
               <span className="text-base font-normal ml-1 opacity-100">
                 Contact Me

@@ -6,7 +6,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <div className="flex text-[white]">
+    <div className="flex text-[white] mb-12">
       <Container className="flex flex-col gap-20">
         <div className="relative flex flex-col gap-6 z-10">
           <SectionHeader

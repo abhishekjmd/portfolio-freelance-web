@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import SectionHeader from "../SectionHeader";
 import Accounts from "../../icons/accounts";
 import Stars from "../Stars";
@@ -6,10 +6,19 @@ import meImage from "../../assets/meImage.jpg";
 import Socials from "../Socials";
 import { FadeIn } from "../FadeIn";
 import Container from "../Container";
+import { useGlobalContext } from "../../context/ContextProvider";
 
 const AboutMe = () => {
+  const { sectionRef } = useGlobalContext();
+  const aboutRef = useRef(null);
+  useEffect(() => {
+    if (sectionRef.current) {
+      sectionRef.current['aboutMe'] = aboutRef.current;
+    }
+    // sectionRef.current['aboutMe'] = document.getElementById('aboutMe');
+  }, [sectionRef]);
   return (
-    <div className="flex  text-[white]">
+    <div ref={aboutRef} className="flex  text-[white]">
       <Container>
         <div className="flex flex-col gap-6 relative z-10">
           <SectionHeader

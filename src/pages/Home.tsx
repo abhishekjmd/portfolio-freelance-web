@@ -7,6 +7,7 @@ import WorkExperience from "../components/home/WorkExperience";
 import Skill from "../components/home/Skill";
 import MyWork from "../components/home/MyWork";
 import Contact from "../components/home/Contact";
+import TabsContainer from "../components/home/TabsContainer";
 const Home = () => {
   return (
     <div className="w-fit h-full overflow-y-scroll overflow-x-hidden text-[white]">
@@ -14,21 +15,24 @@ const Home = () => {
       <Introduction />
       <div className="mt-24 p-4">
         <Border />
+        <AboutMe />
       </div>
-      <AboutMe />
+
       <div className="mt-24 p-4">
         <Border />
+        <WorkExperience />
       </div>
-      <WorkExperience />
+
       <Skill />
       <div className="mt-24 p-4">
         <Border />
+        <MyWork />
       </div>
-      <MyWork />
+
       <div className="mt-24 p-4">
         <Border />
+        <Contact />
       </div>
-      <Contact />
     </div>
   );
 };

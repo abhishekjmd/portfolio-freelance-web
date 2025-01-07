@@ -1,12 +1,6 @@
 import React from "react";
 import VSCode from "../icons/vscode";
 import ChromeMenu from "../icons/chrome-menu";
-import ToggleSidebar from "../icons/toggled-sidebar";
-import SplitVerticalUntoggled from "../icons/split-vertical-untoggle";
-import SplitHorizontal from "../icons/split-horizontal";
-import ChromeMinimize from "../icons/chrome-minimize";
-import ChromeRestore from "../icons/chrome-restore";
-import ChromeClose from "../icons/chrome-close";
 import { HeaderMenu, headerRightIcons } from "../constant/data";
 
 function Header() {

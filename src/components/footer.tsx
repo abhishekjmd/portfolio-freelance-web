@@ -3,6 +3,9 @@ import RadioTower from "../icons/radio-tower";
 import Remote from "../icons/remote";
 import SourceControl from "../icons/source-control";
 import Bell from "../icons/bell";
+import CloudUpload from "../icons/cloud-upload";
+import Info from "../icons/info";
+import Warning from "../icons/warning";
 
 const Footer = () => {
   return (
@@ -14,6 +17,19 @@ const Footer = () => {
         <div className="flex justify-center items-center p-1 px-2 hover:bg-[#282e44]">
           <SourceControl height={18} width={18} />
           <span className="ml-1">main*</span>
+        </div>
+        <div className="hidden lg:block mx-2 mr-4">
+          <CloudUpload />
+        </div>
+        <div className="hidden  lg:flex gap-1">
+          <div className="flex justify-center text-xs">
+            <Info />
+            <span className="ml-1">0</span>
+          </div>
+          <div className="flex justify-center text-xs">
+            <Warning />
+            <span className="ml-1">0</span>
+          </div>
         </div>
       </div>
       <div className="flex px-2 justify-center items-center gap-3">

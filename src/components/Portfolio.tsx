@@ -40,7 +40,7 @@ const Portfolio = ({ onClick, togglePortfolio }) => {
     <div
       className={`flex flex-col  ${
         !togglePortfolio ? "border-b-2" : ""
-      } border-[#1b1e2e] mx-[1px] mt-1 pb-2`}
+      } border-[#1b1e2e] mx-[1px] mt-1 pb-2 lg:pb-1`}
     >
       <div className="flex flex-row w-full justify-between items-center mx-[1px] ">
         <div

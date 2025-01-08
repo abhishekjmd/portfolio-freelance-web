@@ -7,13 +7,15 @@ import Extensions from "../icons/extenstions";
 import Accounts from "../icons/accounts";
 import Gear from "../icons/gear";
 // this contain the left side bar
-const ActivitySideBar = ({ handleExplorerClick, handleRemainingTabs }) => {
+const ActivitySideBar = ({ handleExplorerClick, handleRemainingTabs,isExplorerActive, }) => {
   return (
     <div className="flex flex-col justify-between items-center text-[#a9b1d6] z-30  h-[88vh] overscroll-none">
       <div className="flex flex-col justify-center items-center">
         <div
           onClick={handleExplorerClick}
-          className="p-3 hover:border-l-2  hover:border-[#a9b1d6] opacity-50 hover:opacity-90 "
+          className={`p-3 hover:border-l-2  hover:border-[#a9b1d6] opacity-50 hover:opacity-90 ${
+            isExplorerActive ? "border-[#a9b1d6] opacity-90 border-l-2 " : ""
+          }`}
         >
           <Explorer />
         </div>

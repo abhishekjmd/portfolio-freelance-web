@@ -5,7 +5,7 @@ import Home from "./Home";
 import TabsContainer from "../components/home/TabsContainer";
 
 const Dashboard = () => {
-  const [toggleExplorer, setToggleExplorer] = useState(false);
+  const [toggleExplorer, setToggleExplorer] = useState(true);
   const [toggleRemaining, setToggleRemaining] = useState(false);
 
   const handleToggleExplorer = () => {
@@ -19,20 +19,19 @@ const Dashboard = () => {
       <ActivitySideBar
         handleExplorerClick={handleToggleExplorer}
         handleRemainingTabs={handleToggleRemaining}
+        isExplorerActive={toggleExplorer}
+        
       />
-      <div className={`flex-grow`}>
-        {toggleExplorer ? (
-          <Explorer />
-        ) : !toggleRemaining ? (
-          <>
-            <div className="sticky top-0 z-[100]">
-              <TabsContainer />
-            </div>
-            <Home />
-          </>
-        ) : (
-          <></>
+      <div className="lg:w-screen  flex lg:flex-row">
+        {toggleExplorer && (
+          <div className="lg:w-[30%] lg:border-r-2 lg:border-[#1b1e2e]">
+            <Explorer />
+          </div>
         )}
+        <div className="lg:w-[100%]">
+          <TabsContainer />
+          <Home />
+        </div>
       </div>
     </div>
   );

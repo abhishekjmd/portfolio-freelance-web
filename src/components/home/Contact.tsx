@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Container from "../Container";
 import SectionHeader from "../SectionHeader";
 import Envelope from "../../icons/envelope";
 import ContactForm from "./ContactForm";
+import { useGlobalContext } from "../../context/ContextProvider";
+import Border from "./Border";
 
 const Contact = () => {
+  const { sectionRef } = useGlobalContext();
+  const contactRef = useRef();
+  useEffect(() => {
+    sectionRef.current["contactMe"] = contactRef.current;
+  }, [sectionRef]);
   return (
-    <div className="flex text-[white] mb-12">
-      <Container className="flex flex-col gap-20">
-        <div className="relative flex flex-col gap-6 z-10">
+    <div ref={contactRef} className="flex lg:block text-[white] mb-12">
+      <Container>
+        <div className="relative  lg:mt-16 flex flex-col gap-6 z-10">
+          <div>
+            <Border />
+          </div>
           <SectionHeader
             className="relative"
             icon={
@@ -26,7 +36,7 @@ const Contact = () => {
             }
           />
         </div>
-        <div>
+        <div className="lg:mt-10 w-full">
           <ContactForm />
         </div>
       </Container>

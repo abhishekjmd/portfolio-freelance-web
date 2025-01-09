@@ -29,7 +29,10 @@ const Dashboard = () => {
           </div>
         )}
         <div className="lg:w-[100%]">
-          <TabsContainer />
+        <div className="sticky top-0 z-[10000] bg-[#1e2336]">
+        <TabsContainer />
+      </div>
+          {/* <TabsContainer /> */}
           <Home />
         </div>
       </div>

@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Container from "../Container";
 import SectionHeader from "../SectionHeader";
 import Archive from "../../icons/archive";
 import ProjectsInfoComp from "../ProjectsInfoComp";
+import { useGlobalContext } from "../../context/ContextProvider";
+import { section } from "framer-motion/client";
+import Border from "./Border";
 
 const MyWork = () => {
+  const { sectionRef } = useGlobalContext();
+  const myWorkRef = useRef();
+  useEffect(() => {
+    sectionRef.current["myWork"] = myWorkRef.current;
+  }, []);
   return (
-    <div className="flex text-[white]">
+    <div ref={myWorkRef} className="flex text-[white]">
       <Container className="flex flex-col gap-20">
-        <div className="relative flex flex-col gap-6 z-10">
+        <div className="relative lg:mt-16 flex flex-col gap-6 z-10">
+          <div>
+            <Border />
+          </div>
           <SectionHeader
             className="relative"
             icon={

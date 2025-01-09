@@ -23,7 +23,10 @@ const PublicSection = () => {
         }}
       >
         <div className="flex flex-col w-full  p-0.5 border-l-[2px] ml-[9px] border-[#36394a] border-opacity-40 overflow-y-auto scroll-smooth">
-          <div className="flex flex-row items-center mx-6 hover:bg-[#36394a] hover:rounded-none p-[2px] transform duration-300 gap-1 ">
+          <div
+            onClick={() => scrollToSection("scrollToTop")}
+            className="flex flex-row items-center mx-6 hover:bg-[#36394a] hover:rounded-none p-[2px] transform duration-300 gap-1 "
+          >
             <FavIcon />
             <span className="text-base font-normal ml-1 opacity-100">
               about_me.ts
@@ -40,28 +43,40 @@ const PublicSection = () => {
               </span>
             </div>
 
-            <div className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none">
+            <div
+              onClick={() => scrollToSection("workExperience")}
+              className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none"
+            >
               <WorkExperience />
               <span className="text-base font-normal ml-1 opacity-100">
                 Work Experience
               </span>
             </div>
 
-            <div className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none">
+            <div
+              onClick={() => scrollToSection("skills")}
+              className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none"
+            >
               <Technologies />
               <span className="text-base font-normal ml-1 opacity-100">
                 Skills
               </span>
             </div>
 
-            <div className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none">
+            <div
+              onClick={() => scrollToSection("myWork")}
+              className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none"
+            >
               <Projects />
               <span className="text-base font-normal ml-1 opacity-100">
                 My Work
               </span>
             </div>
 
-            <div className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none">
+            <div
+              onClick={() => scrollToSection("contactMe")}
+              className="flex flex-row items-center gap-1 hover:bg-[#36394a] hover:rounded-none"
+            >
               <ContactMe />
               <span className="text-base font-normal ml-1 opacity-100">
                 Contact Me

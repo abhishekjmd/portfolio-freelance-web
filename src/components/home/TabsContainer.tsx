@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import FavIcon from "../../icons/fav-icon";
 import ChromeClose from "../../icons/chrome-close";
 import GitCompare from "../../icons/git-compare";
@@ -8,14 +8,18 @@ import { useGlobalContext } from "../../context/ContextProvider";
 // import { useScroll } from "../../context/ContextProvider";
 
 const TabsContainer = () => {
-  const { scrollToSection } = useGlobalContext();
+  const { sectionRef } = useGlobalContext();
+  const topRef = useRef();
+  useEffect(() => {
+    sectionRef.current["scrollToTop"] = topRef.current;
+  }, [sectionRef]);
   return (
-    <div className="border-b-2  bg-[#1e2336 ] sticky border-[#1b1e2e] bg-[#1e2336] z-50 flex text-[#a9b1d6] overflow-y-hidden">
+    <div
+      ref={topRef}
+      className="border-b-2  bg-[#1e2336 ] sticky border-[#1b1e2e] bg-[#1e2336] z-50 flex text-[#a9b1d6] overflow-y-hidden"
+    >
       <div className="w-full flex items-center lg:justify-between">
-        <div
-          onClick={() => scrollToSection("aboutMe")}
-          className="flex flex-row justify-center items-center gap-3 lg:gap-2 w-[50%] lg:w-fit capitalize border-r-2 border-[#1b1e2e] p-2 lg:px-2"
-        >
+        <div className="flex flex-row justify-center items-center gap-3 lg:gap-2 w-[50%] lg:w-fit capitalize border-r-2 border-[#1b1e2e] p-2 lg:px-2">
           <div>
             <FavIcon />
           </div>

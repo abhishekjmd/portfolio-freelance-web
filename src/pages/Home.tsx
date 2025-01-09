@@ -13,26 +13,11 @@ const Home = () => {
     <div className="w-fit lg:w-[100%] h-full overflow-y-scroll overflow-x-hidden text-[white]">
       <GridPattern />
       <Introduction />
-      <div className="mt-24 p-4">
-        <Border />
-        <AboutMe />
-      </div>
-
-      <div className="mt-24 p-4">
-        <Border />
-        <WorkExperience />
-      </div>
-
+      <AboutMe />
+      <WorkExperience />
       <Skill />
-      <div className="mt-24 p-4">
-        <Border />
-        <MyWork />
-      </div>
-
-      <div className="mt-24 p-4">
-        <Border />
-        <Contact />
-      </div>
+      <MyWork />
+      <Contact />
     </div>
   );
 };

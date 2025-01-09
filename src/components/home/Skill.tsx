@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from "../Container";
 import SectionHeader from "../SectionHeader";
 import BookOpen from "../../icons/book-open";
 import { useAnimationControls } from "framer-motion";
 import clsx from "clsx";
 import { FadeIn } from "../FadeIn";
+import { useGlobalContext } from "../../context/ContextProvider";
+import Border from "./Border";
 
 const skills = [
   {
@@ -176,7 +178,8 @@ const skillsTitles = {
 const Skill = () => {
   const [activeSkill, setActiveSkill] = useState("Languages");
   const controls = useAnimationControls();
-
+  const { sectionRef } = useGlobalContext();
+  const skillsRef = useRef();
   const handleChangeSkill: React.MouseEventHandler<HTMLButtonElement> = async (
     e
   ) => {
@@ -187,10 +190,17 @@ const Skill = () => {
     await controls.start("visible");
   };
 
+  useEffect(() => {
+    sectionRef.current["skills"] = skillsRef.current;
+  }, [sectionRef]);
+
   return (
-    <div className="flex text-[white]">
+    <div ref={skillsRef} className="flex text-[white]">
       <Container>
-        <div className="relative flex flex-col gap-6 z-10">
+        <div className="relative lg:mt-16 flex flex-col gap-6 z-10">
+          <div>
+            <Border />
+          </div>
           <SectionHeader
             className="relative"
             icon={

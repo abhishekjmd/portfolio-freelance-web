@@ -67,36 +67,46 @@ const AboutMe = () => {
                 development challenges effectively.
               </p>
             </div>
-            <div className="w-full flex">
+            <div className="w-full flex lg:hidden">
               <img
                 src={meImage}
-                className="rounded-[50px] object-center"
-                height={108}
-                width={250}
+                className="rounded-full w-64 object-center"
+                // height={108}
+                // width={150}
               />
             </div>
-            <FadeIn
-              variants={{
-                hidden: { opacity: 0, x: -20 },
-                visible: { opacity: 1, x: 0 },
-              }}
-            >
-              <div className=" flex flex-col  gap-2 w-64">
-                <p className="text-[#7ee787] border-b pb-2  border-b-gray-500 font-bold">
-                  | Languages
-                </p>
-                <p className="font-bold">
-                  Hindi - <span className="text-gray-500">Native</span>
-                </p>
-                <p className="font-bold">
-                  Gujarati - <span className="text-gray-500">Native</span>
-                </p>
-                <p className="border-b  pb-2 border-b-gray-500 font-bold">
-                  English - <span className="text-gray-500">Advance</span>
-                </p>
+            <div className="hidden lg:flex flex-row gap-60 items-center">
+              <div className="flex flex-col">
+                <FadeIn
+                  variants={{
+                    hidden: { opacity: 0, x: -20 },
+                    visible: { opacity: 1, x: 0 },
+                  }}
+                >
+                  <div className=" flex flex-col  gap-2 w-64">
+                    <p className="text-[#7ee787] border-b pb-2  border-b-gray-500 font-bold">
+                      | Languages
+                    </p>
+                    <p className="font-bold">
+                      Hindi - <span className="text-gray-500">Native</span>
+                    </p>
+                    <p className="font-bold">
+                      Gujarati - <span className="text-gray-500">Native</span>
+                    </p>
+                    <p className="border-b  pb-2 border-b-gray-500 font-bold">
+                      English - <span className="text-gray-500">Advance</span>
+                    </p>
+                  </div>
+                </FadeIn>
+                {/* <Socials className="mt-2 lg:hidden" /> */}
               </div>
-            </FadeIn>
-            <Socials className="mt-2" />
+              <div className="w-auto">
+                <img
+                  src={meImage}
+                  className="w-64 h-64 object-contain bg-[black] rounded-full"
+                />
+              </div>
+            </div>
           </div>
         </Container>
       </div>

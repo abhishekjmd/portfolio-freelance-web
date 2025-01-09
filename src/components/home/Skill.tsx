@@ -87,9 +87,6 @@ const skillsLogos = {
       name: "WordPress",
       image: "../../../public/logos/wordpress.png",
     },
-    { name: "", image: "" },
-    { name: "", image: "" },
-    { name: "", image: "" },
   ],
   ["Back" as string]: [
     {
@@ -159,12 +156,7 @@ const skillsLogos = {
       name: "Mailchimp",
       image: "../../../public/logos/mailchimp-logo.webp",
     },
-    { name: "", image: "" },
-    { name: "", image: "" },
-    { name: "", image: "" },
-    { name: "", image: "" },
-    { name: "", image: "" },
-    { name: "", image: "" },
+
   ],
 };
 
@@ -221,8 +213,8 @@ const Skill = () => {
             }
           />
         </div>
-        <div className="mt-10 ">
-          <div className="skills-picker w-[250px] m-[10px] h-[250px] col-span-3 row-span-3 place-self-center isolate">
+        <div className="mt-10 lg:mt-24 lg:flex lg:flex-row lg:justify-center lg:items-center lg:gap-12">
+          <div className="skills-picker  w-[250px] lg:w-[325px] lg:h-[325px] m-[10px] h-[250px] col-span-3 row-span-3 place-self-center isolate">
             <div className="rounded-full inset-6 absolute grid grid-cols-2  gap-2 rotate-45">
               {skills.map((skill) => (
                 <button
@@ -236,7 +228,7 @@ const Skill = () => {
                 >
                   <p
                     className={clsx(
-                      "text-xl text-white font-semibold tracking-wide w-min -rotate-45",
+                      "text-xl lg:text-3xl text-white font-semibold tracking-wide w-min -rotate-45",
                       skill.textClassNames
                     )}
                   >
@@ -252,36 +244,65 @@ const Skill = () => {
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-3">
-            {skillsLogos[activeSkill].map((skill, index) => {
-              if (!skill.name)
-                return <div key={index} className="h-[115px] w-24" />;
+            <div className="lg:grid grid-cols-3 hidden">
+              {skillsLogos[activeSkill].map((skill, index) => {
+                if (!skill.name)
+                  return <div key={index} className="h-[115px] w-24" />;
+                return (
+                  <FadeIn
+                    key={skill.name}
+                    className="h-[115px] w-24  place-self-center flex flex-col"
+                  >
+                    <div className="mt-auto ">
+                      <img
+                        src={skill.image}
+                        className="object-contain rounded-md m-auto"
+                        alt=""
+                        height={64}
+                        width={64}
+                        style={{
+                          width: 64,
+                          height: 64,
+                        }}
+                      />
+                      <h3 className="text-sm font-semibold tracking-tight text-[#525df3] text-center bg-white rounded-full w-min px-2 m-2 mx-auto">
+                        {skill.name}
+                      </h3>
+                    </div>
+                  </FadeIn>
+                );
+              })}
+            </div>
+        </div>
+        <div className="grid grid-cols-3 lg:hidden">
+          {skillsLogos[activeSkill].map((skill, index) => {
+            if (!skill.name)
+              return <div key={index} className="h-[115px] w-24" />;
 
-              return (
-                <FadeIn
-                  key={skill.name}
-                  className="h-[115px] w-24 place-self-center flex flex-col"
-                >
-                  <div className="mt-auto">
-                    <img
-                      src={skill.image}
-                      className="object-contain rounded-md m-auto"
-                      alt=""
-                      height={64}
-                      width={64}
-                      style={{
-                        width: 64,
-                        height: 64,
-                      }}
-                    />
-                    <h3 className="text-sm font-semibold tracking-tight text-[#525df3] text-center bg-white rounded-full w-min px-2 m-2 mx-auto">
-                      {skill.name}
-                    </h3>
-                  </div>
-                </FadeIn>
-              );
-            })}
-          </div>
+            return (
+              <FadeIn
+                key={skill.name}
+                className="h-[115px] w-24  place-self-center flex flex-col"
+              >
+                <div className="mt-auto ">
+                  <img
+                    src={skill.image}
+                    className="object-contain rounded-md m-auto"
+                    alt=""
+                    height={64}
+                    width={64}
+                    style={{
+                      width: 64,
+                      height: 64,
+                    }}
+                  />
+                  <h3 className="text-sm font-semibold tracking-tight text-[#525df3] text-center bg-white rounded-full w-min px-2 m-2 mx-auto">
+                    {skill.name}
+                  </h3>
+                </div>
+              </FadeIn>
+            );
+          })}
         </div>
       </Container>
     </div>

@@ -37,14 +37,25 @@ function ArrowIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 
 const Socials = ({ className }: { className?: string }) => {
   const socialMediaLinks = [
-    { title: "LinkedIn", href: "./home", icon: LinkedinIcon },
-    { title: "github", href: "github", icon: GitHubIcon },
+    {
+      title: "LinkedIn",
+      href: "https://www.linkedin.com/in/abhishekjmd",
+      icon: LinkedinIcon,
+    },
+    {
+      title: "github",
+      href: "https://github.com/abhishekjmd",
+      icon: GitHubIcon,
+    },
   ];
   return (
-    <FadeInStagger role="list" className={clsx("flex gap-x-4 text-white",className)}>
-      <div className={clsx("text-[white] flex flex-row items-center gap-5",)}>
+    <FadeInStagger
+      role="list"
+      className={clsx("flex gap-x-4 text-white", className)}
+    >
+      <div className={clsx("text-[white] flex flex-row items-center gap-5")}>
         {socialMediaLinks.map((profile) => (
-          <FadeIn key={profile.title}>
+          <FadeIn key={profile.href}>
             <a
               href={profile.href}
               target=" _blank"
@@ -56,10 +67,14 @@ const Socials = ({ className }: { className?: string }) => {
           </FadeIn>
         ))}
         <FadeIn>
-          <div className="w-fit  p-3 flex flex-rol justify-between items-center bg-[white] text-[black]  py-1.5 gap-2 rounded-full">
+          <a
+            href="mailto:abhishektiwariisro1278@gmail.com"
+             target="_blank"
+            className="w-fit cursor-pointer  p-3 flex flex-rol justify-between items-center bg-[white] text-[black]  py-1.5 gap-2 rounded-full"
+          >
             <h1 className="text-sm font-semibold">Contact Me</h1>
             <ArrowIcon className="h-5 w-5" />
-          </div>
+          </a>
         </FadeIn>
       </div>
     </FadeInStagger>

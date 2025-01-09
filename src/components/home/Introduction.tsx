@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../../index.css";
 import AnimatedTitle from "../AnimatedTitle";
 import Container from "../Container";
 import Socials from "../Socials";
 import { FadeIn } from "../FadeIn";
+import { useGlobalContext } from "../../context/ContextProvider";
 const Introduction = () => {
+  const {sectionRef} = useGlobalContext();
+  const introductionRef = useRef();
+  useEffect(()=>{
+    sectionRef.current['introduction'] = introductionRef.current
+  },[sectionRef])
+  
   return (
-    <div className="w-full overflow-y-auto overflow-x-hidden text-[white]">
+    <div ref={introductionRef} className="w-full relative z-[1000] overflow-y-auto overflow-x-hidden text-[white]">
+      
       <Container>
         <div className="h-full relative">
           <FadeIn className="max-w-5xl pt-40 md:pt-[20vh] 2xl:pt-[30vh]">

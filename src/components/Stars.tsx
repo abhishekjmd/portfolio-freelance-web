@@ -29,6 +29,13 @@ export default function Stars({ id }: { id: string }) {
           },
         },
       }}
+      style={{
+        position: 'absolute', // Ensure proper positioning inside parent
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+      }}
       init={customInit}
     />
   );

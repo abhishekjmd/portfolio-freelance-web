@@ -24,7 +24,7 @@ const PublicSection = () => {
       >
         <div className="flex flex-col w-full  p-0.5 border-l-[2px] ml-[9px] border-[#36394a] border-opacity-40 overflow-y-auto scroll-smooth">
           <div
-            onClick={() => scrollToSection("scrollToTop")}
+            onClick={() => scrollToSection("introduction")}
             className="flex flex-row items-center mx-6 hover:bg-[#36394a] hover:rounded-none p-[2px] transform duration-300 gap-1 "
           >
             <FavIcon />

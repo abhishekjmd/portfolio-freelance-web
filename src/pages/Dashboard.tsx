@@ -17,11 +17,13 @@ const Dashboard = () => {
   };
   return (
     <div className="flex flex-row h-screen overflow-hidden">
+      <div className="sticky top-0 z-[10000]">
       <ActivitySideBar
         handleExplorerClick={handleToggleExplorer}
         handleRemainingTabs={handleToggleRemaining}
         activeTab={activeTab}
       />
+      </div>
       <div className="lg:w-screen  flex lg:flex-row">
         {toggleExplorer && (
           <div className="lg:w-[30%] lg:border-r-2 lg:border-[#1b1e2e]">

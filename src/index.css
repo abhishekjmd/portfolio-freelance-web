@@ -191,3 +191,18 @@
 .my-work-img-shadow {
   box-shadow: -4px -4px 25px 4px #000000;
 }
+
+
+#stars-container {
+  position: relative; /* Makes it a positioned ancestor for the canvas */
+  width: 100%;        /* Ensures it spans the full width */
+  height: 100vh;      /* Ensures it spans the full viewport height */
+}
+
+#stars-container canvas {
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  top:0;
+  bottom:0
+}

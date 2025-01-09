@@ -7,6 +7,7 @@ import WorkExperience from "../components/home/WorkExperience";
 import Skill from "../components/home/Skill";
 import MyWork from "../components/home/MyWork";
 import Contact from "../components/home/Contact";
+import Stars from "../components/Stars";
 
 const Home = () => {
   return (

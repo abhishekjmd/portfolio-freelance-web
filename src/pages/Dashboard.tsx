@@ -5,22 +5,22 @@ import Home from "./Home";
 import TabsContainer from "../components/home/TabsContainer";
 
 const Dashboard = () => {
+  const [activeTab, setActiveTab] = useState("Explorer");
   const [toggleExplorer, setToggleExplorer] = useState(true);
-  const [toggleRemaining, setToggleRemaining] = useState(false);
-
   const handleToggleExplorer = () => {
+    setActiveTab("Explorer");
     setToggleExplorer(!toggleExplorer);
   };
-  const handleToggleRemaining = () => {
-    setToggleRemaining(!toggleRemaining);
+  const handleToggleRemaining = (tabname) => {
+    setActiveTab(tabname);
+    setToggleExplorer(false)
   };
   return (
     <div className="flex flex-row h-screen overflow-hidden">
       <ActivitySideBar
         handleExplorerClick={handleToggleExplorer}
         handleRemainingTabs={handleToggleRemaining}
-        isExplorerActive={toggleExplorer}
-        
+        activeTab={activeTab}
       />
       <div className="lg:w-screen  flex lg:flex-row">
         {toggleExplorer && (

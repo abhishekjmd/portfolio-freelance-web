@@ -8,7 +8,7 @@ import { FadeIn } from "../FadeIn";
 import Container from "../Container";
 import { useGlobalContext } from "../../context/ContextProvider";
 import Border from "./Border";
-
+import { ArrowIcon } from "../../icons/arrow-icons";
 const AboutMe = () => {
   const { sectionRef } = useGlobalContext();
   const aboutRef = useRef(null);
@@ -67,16 +67,9 @@ const AboutMe = () => {
                 development challenges effectively.
               </p>
             </div>
-            <div className="w-full flex lg:hidden">
-              <img
-                src={meImage}
-                className="rounded-full w-64 object-center"
-                // height={108}
-                // width={150}
-              />
-            </div>
-            <div className="hidden lg:flex flex-row gap-60 items-center">
-              <div className="flex flex-col">
+
+            <div className=" lg:flex lg:flex-row lg:gap-60 flex flex-col gap-5 items-center">
+              <div className="flex flex-col lg:gap-5 items-center gap-5">
                 <FadeIn
                   variants={{
                     hidden: { opacity: 0, x: -20 },
@@ -98,7 +91,18 @@ const AboutMe = () => {
                     </p>
                   </div>
                 </FadeIn>
-                {/* <Socials className="mt-2 lg:hidden" /> */}
+                <FadeIn className="lg:w-full w-fit">
+                  <a
+                    href="https://drive.google.com/file/d/10gy1CXdWEw5VJwsl7z3H-CBlxcCQV10W/view?usp=sharing"
+                    target="_blank"
+                    className="w-fit cursor-pointer  p-3 flex flex-rol justify-between items-center border-4 border-[#7ee787]  bg-[white] text-[black]  py-1.5 gap-2 rounded-full"
+                  >
+                    <h1 className="text-sm font-semibold">
+                      Checkout My resume
+                    </h1>
+                    <ArrowIcon className="h-5 w-5" />
+                  </a>
+                </FadeIn>
               </div>
               <div className="w-auto">
                 <img

@@ -14,7 +14,7 @@ const Contact = () => {
   }, [sectionRef]);
   return (
     <div ref={contactRef} className="flex lg:block text-[white] mb-12">
-      <Container>
+      <Container className="flex lg:block flex-col gap-8">
         <div className="relative  lg:mt-16 flex flex-col gap-6 z-10">
           <div>
             <Border />

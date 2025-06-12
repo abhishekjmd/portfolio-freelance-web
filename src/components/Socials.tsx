@@ -68,11 +68,11 @@ const Socials = ({ className }: { className?: string }) => {
         ))}
         <FadeIn>
           <a
-            href="mailto:abhishektiwariisro1278@gmail.com"
-             target="_blank"
+            href="https://wa.me/919825571401?text=Hi%20Abhishek%2C%20I'm%20interested%20in%20working%20with%20you."
+            target="_blank"
             className="w-fit cursor-pointer  p-3 flex flex-rol justify-between items-center bg-[white] text-[black]  py-1.5 gap-2 rounded-full"
           >
-            <h1 className="text-sm font-semibold">Contact Me</h1>
+            <h1 className="text-sm font-semibold">Let’s Work Together</h1>
             <ArrowIcon className="h-5 w-5" />
           </a>
         </FadeIn>

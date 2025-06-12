@@ -10,7 +10,6 @@ const Home = () => {
     <div className="w-fit lg:w-[100%] h-full overflow-y-scroll overflow-x-hidden text-[white]">
       <GridPattern />
       <Introduction />
-      <GridPattern />
       <AboutMe />
       <Skill />
       <MyWork />

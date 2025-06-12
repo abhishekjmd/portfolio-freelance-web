@@ -203,11 +203,13 @@ const Skill = () => {
             title="Skills"
             description={
               <div className="mt-2">
-                <span className="text-[#939aff]">Full Stack software</span>{" "}
-                developer{" "}
-                <span className="text-[#939aff]">with experience</span> in
-                Front-End and <span className="text-[#939aff]">Back-End</span>{" "}
-                technologies
+                {/* <span className="text-[#939aff]">Full-Stack </span>{" "} Developer */}
+                Delivering end-to-end{" "}
+                <span className="text-[#939aff]">Web & App</span> solutions —
+                from UI/UX design to{" "}
+                <span className="text-[#939aff]">Front-End</span>,{" "}
+                Back-End, and{" "}
+                <span className="text-[#939aff]">deployment</span>.
               </div>
             }
           />

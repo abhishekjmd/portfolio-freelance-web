@@ -19,24 +19,11 @@ const Dashboard = () => {
   };
   return (
     <div className="flex flex-row h-screen overflow-hidden">
-      <div className="sticky top-0 z-[10000]">
-        <ActivitySideBar
-          handleExplorerClick={handleToggleExplorer}
-          handleRemainingTabs={handleToggleRemaining}
-          activeTab={activeTab}
-        />
-      </div>
       <div className="lg:w-screen  flex lg:flex-row">
-        {toggleExplorer && (
-          <div className="lg:w-[30%] flex-shrink-0 lg:flex-shrink w-[calc(100%-10%)] lg:border-r-2 lg:border-[#1b1e2e]">
-            <Explorer />
-          </div>
-        )}
-        <div className="lg:w-[100%]">
-          <div className="sticky top-0 z-[10000] bg-[#1e2336]">
-            <TabsContainer />
-          </div>
-          {/* <TabsContainer /> */}
+        <div className="w-[20%] lg:w-[30%] flex-shrink-0  lg:flex-shrink  border-r border-[#a9b1d6] border-opacity-10 ">
+          <Explorer />
+        </div>
+        <div className="w-[80%] lg:w-[100%]">
           <Home />
         </div>
       </div>

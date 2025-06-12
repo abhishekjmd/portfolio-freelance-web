@@ -18,10 +18,10 @@ export const GlobalProvider = ({ children }) => {
   const scrollToSection = (sectionName) => {
     const section = sectionRef.current[sectionName];
     if (section) {
-      console.warn("about me pressed");
-      if (window.innerWidth < 1024) {
-        setToggleExplorer(false);
-      }
+      // console.warn("about me pressed");
+      // if (window.innerWidth < 1024) {
+      //   // setToggleExplorer(false);
+      // }
 
       section.scrollIntoView({ behavior: "smooth" });
     }

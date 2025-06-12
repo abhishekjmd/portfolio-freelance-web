@@ -2,8 +2,8 @@ export default function Technologies() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="18"
-      width="18"
+      height="32"
+      width="32"
       viewBox="0 0 24 24"
     >
       <path

@@ -32,37 +32,10 @@ const Explorer = () => {
   };
 
   return (
-    <div className="flex flex-col w-auto  text-[#a9b1d6] h-full gap-1 lg:gap-0 ml-1 overflow-hidden">
-      {/* the top section with text explorer */}
-      <div className="flex justify-between items-center px-7 lg:px-6 lg:py-2">
-        <div className="flex uppercase text-xs  my-2 lg:my-0   select-none items-center justify-between">
-          <h1>explorer</h1>
-        </div>
-        <div className="p-1 hover:bg-[#36394a] rounded-md ">
-          <Ellipsis />
-        </div>
-      </div>
-      <div
-        style={togglePortfolio ? { flexGrow: 1 } : { flexGrow: 0 }}
-        className={`flex flex-col select-none flex-1 ${
-          togglePortfolio ? "justify-between" : "justify-center"
-        }`}
-      >
-        {/* editor section this is toggable */}
+    <div className="flex flex-col w-full text-[#a9b1d6] h-full gap-1 lg:gap-0 overflow-hidden">
+      <div className={`flex flex-col select-none  ${"justify-between"}`}>
         <div>
-          <Editor onClick={handleEditor} toggleEditor={toggleEditor} />
-          {/* <div className={`${togglePortfolio ? 'overflow-visible':'overflow-hidden'}`}> */}
-          <Portfolio
-            onClick={handlePortfolio}
-            togglePortfolio={togglePortfolio}
-          />
-          {/* </div> */}
-        </div>
-
-        <div>
-          {inActiveTabs.map((item, index) => (
-            <ExplorerTab key={item.id} text={item.title} />
-          ))}
+          <Portfolio togglePortfolio={togglePortfolio} />
         </div>
       </div>
     </div>
